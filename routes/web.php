@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,12 @@ Route::get('/my-view-2', [MyController::class, 'myView2Method']);
 Route::get('/data-index', [MyController::class, 'indexView']);
 
 
+Route::get('/students-list', [StudentController::class, 'studentlistView']);
+
+
+Route::get('/create-student', [StudentController::class, 'createStudentView']);
+
+/**
+ * submit-std-data is from createStudent view
+ */
+Route::post('/submit-std-data', [StudentController::class, 'createStudentMethod']);
