@@ -13,3 +13,5 @@ php artisan serve
 
 ## Controllers
 '''
+php artisan make:controller MyController
+```
