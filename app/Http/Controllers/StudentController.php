@@ -15,6 +15,11 @@ class StudentController extends Controller
         return view('students.list', compact('students'));
     }
 
+    public function getStudentsAPI(){
+        $students = Student::all();
+        return $students;
+    }
+
 
     public function createStudentView(){
         return view('students.create');
