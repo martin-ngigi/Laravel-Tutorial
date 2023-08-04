@@ -20,6 +20,15 @@ class StudentController extends Controller
         return $students;
     }
 
+    public function createStudentAPI(Request $request){
+        
+        $student = new Student();
+        $student->name = $request->name;
+        $student->age = $request->age;
+        $student->save();
+
+        return $student;
+    }
 
     public function createStudentView(){
         return view('students.create');

@@ -22,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 ///http://127.0.0.1:8000/api/all-students
 Route::get('/all-students', [StudentController::class, 'getStudentsAPI']);
+
+Route::post('/create-student', [StudentController::class, 'createStudentAPI']);
