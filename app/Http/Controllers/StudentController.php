@@ -10,7 +10,9 @@ class StudentController extends Controller
 {
     //
     public function studentlistView(){
-        return view('students.list');
+        $students = Student::all();
+
+        return view('students.list', compact('students'));
     }
 
 
